@@ -31,4 +31,7 @@ for pkg in "${REMOVE[@]}"; do
     fi
 done
 
+# Elimină repo-ul terra-mesa, a cărui cheie GPG lipsește
+rm -f /etc/yum.repos.d/terra*.repo
+
 systemctl enable podman.socket
